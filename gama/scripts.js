@@ -87,22 +87,22 @@ const SiteApp = (() => {
 
     tileGrids: {
       hero: {
-        tiles: [
-          { type: "kicker", text: "Our top picks", place: { base: { col: "1 / 3", row: "1 / 2" } } },
-          { type: "image", assetPath: "assets.hero.main", place: { base: { col: "3 / 7", row: "1 / 4" } } },
-          {
-            type: "text",
-            text: "In publishing and graphic design, placeholder copy can be used to preview layout and rhythm.",
-            place: { base: { col: "1 / 3", row: "2 / 4" } },
-          },
-          {
-            type: "text",
-            text: "Sustainable sourcing focuses on traceability, lower waste, and durable materials.",
-            place: { base: { col: "1 / 4", row: "4 / 6" } },
-          },
-          { type: "image", assetPath: "assets.hero.leaf", place: { base: { col: "4 / 6", row: "4 / 6" } } },
-          { type: "image", assetPath: "assets.hero.forest", place: { base: { col: "6 / 7", row: "4 / 6" } } },
-        ],
+        // tiles: [
+        //   { type: "kicker", text: "Our top picks", place: { base: { col: "1 / 3", row: "1 / 2" } } },
+        //   { type: "image", assetPath: "assets.hero.main", place: { base: { col: "3 / 7", row: "1 / 4" } } },
+        //   {
+        //     type: "text",
+        //     text: "In publishing and graphic design, placeholder copy can be used to preview layout and rhythm.",
+        //     place: { base: { col: "1 / 3", row: "2 / 4" } },
+        //   },
+        //   {
+        //     type: "text",
+        //     text: "Sustainable sourcing focuses on traceability, lower waste, and durable materials.",
+        //     place: { base: { col: "1 / 4", row: "4 / 6" } },
+        //   },
+        //   { type: "image", assetPath: "assets.hero.leaf", place: { base: { col: "4 / 6", row: "4 / 6" } } },
+        //   { type: "image", assetPath: "assets.hero.forest", place: { base: { col: "6 / 7", row: "4 / 6" } } },
+        // ],
       },
 
       community: {

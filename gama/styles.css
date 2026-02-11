@@ -310,7 +310,7 @@ input {
 /* Hero */
 .c-hero {
   position: relative;
-  min-height: 92vh;
+  min-height: 64vh;
   color: var(--tint);
   overflow: hidden;
 
@@ -324,7 +324,7 @@ input {
 
 .c-hero__grid {
   display: grid;
-  grid-template-columns: 1.05fr 0.95fr;
+  /* grid-template-columns: 1.05fr 0.95fr; */
   gap: clamp(20px, 4vw, 56px);
   align-items: center;
   padding-top: 112px;
