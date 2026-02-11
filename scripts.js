@@ -21,38 +21,40 @@ const SiteApp = (() => {
 
   const APP_CONFIG = {
     text: {
-      brand: {name: "MaGa Cleaning Services"},
-      nav: { home: "Home", services: "Services", contact: "Contact", signup: "Sign Up" },
+      brand: { name: "Maga Cleaning Services" },
+      nav: { home: "Home", services: "Our Services", contact: "Contact", signup: "Request a Quote" },
       hero: {
+        // title: "Full-service cleaning for homes and businesses",
+        // subtitle: "Based in Olalla, Washington—serving residential and commercial properties across the region.",
         title: "Cleaning Your Worries Away",
         subtitle: "A clean space, is a clean mind.",
-        ctaPrimary: "About",
-        ctaSecondary: "Services",
-        scrollHint: "Contact",
+        ctaPrimary: "View Services",
+        ctaSecondary: "Our Story",
+        ctaThird: "Request a quote",
       },
       impact: {
         title: "Our Story",
-        lead:
-          "A purchase can be mapped to measurable outcomes by tracking trees planted, materials saved, and emissions reduced.",
+        lead: "A family-operated cleaning company focused on reliable, high-quality results.",
         body:
-          "Transparent reporting links each product to a supply chain footprint, then aggregates the results into community-level impact.",
+          "Maga Cleaning Services supports residential and commercial clients with consistent, transparent service. The work spans office cleaning, carpet washing, move-in and move-out cleaning, post-construction cleanup, and other recurring needs—structured as a single, dependable cleaning partner.",
       },
       products: {
-        title: "Our Company",
-        lead: "Curated, low-maintenance plants sized for desks, shelves, and living rooms.",
+        title: "What We Offer",
+        lead:
+          "Service lines include office cleaning, window cleaning, floor care, carpet washing, power washing, post-construction cleanup, and more.",
       },
       community: {
-        title: "Join Our Community",
+        title: "Contact",
         lead:
-          "Community programs translate individual purchases into shared environmental outcomes through local planting and education.",
-        newsletter: { placeholder: "Enter your email" },
+          "Phone: (253) 258-5779. Email: mario@magacleaningservices.com. Location: Olalla, WA 98359. Hours: Mon–Fri 8:00AM–5:00PM. Payment: check or money order.",
+        newsletter: { placeholder: "Your email for a quote" },
       },
       footer: { backToTop: "Back to top" },
     },
 
     assets: {
       brand: {
-        logo: {src: "assets/logo.png", alt: "MaGa Cleaning Services"},
+        logo: { src: "assets/logo.png", alt: "MaGa Cleaning Services" },
       },
       hero: {
         background: { src: "assets/Rainer.jpg" },
@@ -60,12 +62,6 @@ const SiteApp = (() => {
           src: "assets/touch.png",
           alt: "Olive-gloved hand reaching toward an industrial vacuum nozzle on an off-white background",
         },
-        leaf: { src: "assets/hero-leaf.jpg", alt: "Close-up texture of green leaves" },
-        forest: { src: "assets/hero-forest.jpg", alt: "Forest greenery background" },
-      },
-      impact: {
-        forest: { src: "assets/spaceNeedle.jpg" },
-        leaf: { src: "assets/impact-leaf.jpg" },
       },
       community: {
         background: { src: "assets/community-bg.jpg" },
@@ -73,44 +69,20 @@ const SiteApp = (() => {
         meeting: { src: "assets/community-meeting.jpg", alt: "People collaborating at a table" },
         trail: { src: "assets/community-trail.jpg", alt: "Forest trail with sunlight" },
       },
-      products: {
-        plant1: { src: "assets/plant-1.jpg", alt: "Arborvite plant" },
-        plant2: { src: "assets/plant-2.jpg", alt: "Arborvite tall plant" },
-        plant3: { src: "assets/plant-3.jpg", alt: "Arborvite compact plant" },
-        plant4: { src: "assets/plant-4.jpg", alt: "Arborvite statement plant" },
-      },
     },
 
     partnerRows: {
-      default: ["WOODCHUCK | USA", "10", "TREE TRIBE", "trvst"],
+      default: ["Olalla, WA", "Mon–Fri 8:00AM–5:00PM", "(253) 258-5779", "mario@magacleaningservices.com"],
     },
 
     tileGrids: {
-      hero: {
-        // tiles: [
-        //   { type: "kicker", text: "Our top picks", place: { base: { col: "1 / 3", row: "1 / 2" } } },
-        //   { type: "image", assetPath: "assets.hero.main", place: { base: { col: "3 / 7", row: "1 / 4" } } },
-        //   {
-        //     type: "text",
-        //     text: "In publishing and graphic design, placeholder copy can be used to preview layout and rhythm.",
-        //     place: { base: { col: "1 / 3", row: "2 / 4" } },
-        //   },
-        //   {
-        //     type: "text",
-        //     text: "Sustainable sourcing focuses on traceability, lower waste, and durable materials.",
-        //     place: { base: { col: "1 / 4", row: "4 / 6" } },
-        //   },
-        //   { type: "image", assetPath: "assets.hero.leaf", place: { base: { col: "4 / 6", row: "4 / 6" } } },
-        //   { type: "image", assetPath: "assets.hero.forest", place: { base: { col: "6 / 7", row: "4 / 6" } } },
-        // ],
-      },
 
       community: {
         tiles: [
           { type: "image", assetPath: "assets.community.hands", place: { base: { col: "1 / 3", row: "1 / 3" } } },
           {
             type: "text",
-            text: "Community work runs continuously to support restoration projects and measurable long-term impact.",
+            text: "Dedicated, reliable, and transparent cleaning professionals focused on meeting your needs and exceeding expectations.",
             place: { base: { col: "3 / 5", row: "1 / 3" } },
           },
           {
@@ -118,28 +90,71 @@ const SiteApp = (() => {
             assetPath: "assets.community.meeting",
             place: { base: { col: "5 / 7", row: "1 / 4" } },
           },
-          { type: "kicker", text: "Get updates from our newsletter", place: { base: { col: "1 / 4", row: "3 / 5" } } },
+          { type: "kicker", text: "Request a quote", place: { base: { col: "1 / 4", row: "3 / 5" } } },
           { type: "image", assetPath: "assets.community.trail", place: { base: { col: "4 / 7", row: "4 / 6" } } },
         ],
       },
     },
-
     metricGrids: {
       impact: [
-        { type: "metric", variant: "dark", label: "Climate Impact", value: "60%" },
-        { type: "metric", variant: "light", label: "Trees Saved", value: "1.5M" },
-        { type: "image", bgAssetPath: "assets.impact.forest", overlay: "strong" },
-        { type: "image", bgAssetPath: "assets.impact.leaf", overlay: "soft" },
+        { type: "metric", variant: "dark", label: "Phone", value: "(253) 258-5779" },
+        { type: "metric", variant: "light", label: "Email", value: "mario@magacleaningservices.com" },
+        { type: "metric", variant: "light", label: "Hours", value: "Mon–Fri 8:00AM–5:00PM" },
+        { type: "metric", variant: "dark", label: "Location", value: "Olalla, WA 98359" },
       ],
     },
-
     productGrids: {
       catalog: [
-        { name: "Arborvite", price: 75, assetPath: "assets.products.plant1" },
-        { name: "Arborvite", price: 55, assetPath: "assets.products.plant2" },
-        { name: "Arborvite", price: 20, assetPath: "assets.products.plant3" },
-        { name: "Arborvite", price: 82, assetPath: "assets.products.plant4" },
-        { name: "Arborvite", price: null, assetPath: null, disabled: true },
+        {
+          name: "Office Cleaning",
+          desc: "Workspace cleaning that helps keep areas organized, hygienic, and ready for daily use.",
+          assetPath: null,
+        },
+        {
+          name: "Window Cleaning",
+          desc: "Removal of fingerprints, dust, and buildup for clear, polished windows.",
+          assetPath: null,
+        },
+        {
+          name: "Floor Cleaning",
+          desc: "Floor care designed to lift stains and grime so surfaces look clean and bright.",
+          assetPath: null,
+        },
+        {
+          name: "Carpet Washing",
+          desc: "Deep carpet cleaning to reduce stains and odors and refresh high-traffic areas.",
+          assetPath: null,
+        },
+        {
+          name: "Power Washing",
+          desc: "High-pressure cleaning for driveways, patios, decks, and exterior surfaces.",
+          assetPath: null,
+        },
+        {
+          name: "Post-Construction Clean Up",
+          desc: "Fast cleanup after construction or renovation to remove dust, debris, and residue.",
+          assetPath: null,
+        },
+        {
+          name: "Move-In & Move-Out Cleaning",
+          desc: "Detailed cleaning before move-in or after move-out so spaces feel fresh and reset.",
+          assetPath: null,
+        },
+        {
+          name: "After-Party Cleaning",
+          desc: "Post-event cleaning that restores rooms back to normal after gatherings.",
+          assetPath: null,
+        },
+        {
+          name: "Commercial Cleaning",
+          desc: "Cleaning plans for commercial properties of any size, tailored to your schedule.",
+          assetPath: null,
+        },
+        {
+          name: "Concrete Washing",
+          desc: "Concrete cleaning that removes dirt and buildup to improve appearance and safety.",
+          assetPath: null,
+        },
       ],
     },
   };
@@ -380,10 +395,10 @@ const SiteApp = (() => {
 
         const cta = isDisabled
           ? createEl("span", {
-              className: "c-btn c-btn--soft c-product__cta is-disabled",
-              text: "Buy Now",
-              attrs: { "aria-disabled": "true" },
-            })
+            className: "c-btn c-btn--soft c-product__cta is-disabled",
+            text: "Buy Now",
+            attrs: { "aria-disabled": "true" },
+          })
           : createEl("a", { className: "c-btn c-btn--soft c-product__cta", text: "Buy Now", attrs: { href: "#signup" } });
 
         frag.appendChild(createEl("article", { className: cardClass, attrs: { role: "listitem" } }, [media, meta, cta]));
@@ -486,7 +501,7 @@ const SiteApp = (() => {
 
   function bindAssetPicker({ input, assetPath, alt } = {}) {
     const inputEl = typeof input === "string" ? query(input) : input;
-    if (!inputEl || !assetPath) return () => {};
+    if (!inputEl || !assetPath) return () => { };
 
     let lastUrl = null;
 

@@ -138,7 +138,7 @@ input {
 .u-bg {
   background-image: var(--bg-overlay, none), var(--bg-image, none);
   background-size: cover;
-  background-position: center;
+  background-position: 0% 45%;
 }
 
 .u-sr-only {
@@ -310,7 +310,7 @@ input {
 /* Hero */
 .c-hero {
   position: relative;
-  min-height: 64vh;
+  min-height: 72vh;
   color: var(--tint);
   overflow: hidden;
 
@@ -324,10 +324,9 @@ input {
 
 .c-hero__grid {
   display: grid;
-  /* grid-template-columns: 1.05fr 0.95fr; */
   gap: clamp(20px, 4vw, 56px);
   align-items: center;
-  padding-top: 112px;
+  padding-top: 72px;
   padding-bottom: 86px;
 }
 
@@ -350,7 +349,7 @@ input {
 .c-hero__actions {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
+  gap: 85px;
   margin-top: 22px;
 }
 
@@ -440,7 +439,7 @@ input {
 .c-partners {
   position: absolute;
   inset: auto 0 0 0;
-  padding-block: 18px;
+  padding-block: 24px;
   background: rgba(86, 106, 80, 0.58);
   border-top: 1px solid rgba(255, 255, 255, 0.16);
   backdrop-filter: blur(10px);
@@ -459,7 +458,7 @@ input {
   font-weight: 650;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  font-size: 12px;
+  font-size: 14px;
 }
 
 /* Metric grid */
