@@ -22,33 +22,28 @@ const SiteApp = (() => {
   const APP_CONFIG = {
     text: {
       brand: { name: "Maga Cleaning Services" },
-      nav: { home: "Home", services: "Our Services", contact: "Contact", signup: "Request a Quote" },
+      nav: { home: "Home", services: "Services", reviews: "Reviews", gallery: "Gallery", contact: "Contact",},
       hero: {
-        // title: "Full-service cleaning for homes and businesses",
-        // subtitle: "Based in Olalla, Washington—serving residential and commercial properties across the region.",
         title: "Cleaning Your Worries Away",
         subtitle: "A clean space, is a clean mind.",
         ctaPrimary: "View Services",
         ctaSecondary: "Our Story",
         ctaThird: "Request a quote",
       },
-      impact: {
-        title: "Our Story",
-        lead: "A family-operated cleaning company focused on reliable, high-quality results.",
-        body:
-          "Maga Cleaning Services supports residential and commercial clients with consistent, transparent service. The work spans office cleaning, carpet washing, move-in and move-out cleaning, post-construction cleanup, and other recurring needs—structured as a single, dependable cleaning partner.",
-      },
-      products: {
-        title: "What We Offer",
-        lead:
-          "Service lines include office cleaning, window cleaning, floor care, carpet washing, power washing, post-construction cleanup, and more.",
-      },
-      community: {
-        title: "Contact",
-        lead:
-          "Phone: (253) 258-5779. Email: mario@magacleaningservices.com. Location: Olalla, WA 98359. Hours: Mon–Fri 8:00AM–5:00PM. Payment: check or money order.",
-        newsletter: { placeholder: "Your email for a quote" },
-      },
+
+//      impact: {
+//        title: "Our Story",
+//        lead: "A family-operated cleaning company focused on reliable, high-quality results.",
+//        body:
+//          "Maga Cleaning Services supports residential and commercial clients with consistent, transparent service. The work spans office cleaning, carpet washing, move-in and move-out cleaning, post-construction cleanup, and other recurring needs—structured as a single, dependable cleaning partner.",
+//      },
+
+//      products: {
+//        title: "What We Offer",
+//        lead:
+//          "Service lines include office cleaning, window cleaning, floor care, carpet washing, power washing, post-construction cleanup, and more.",
+//      },
+
       footer: { backToTop: "Back to top" },
     },
 
@@ -57,17 +52,7 @@ const SiteApp = (() => {
         logo: { src: "assets/logo.png", alt: "MaGa Cleaning Services" },
       },
       hero: {
-        background: { src: "assets/Rainer.jpg" },
-        main: {
-          src: "assets/touch.png",
-          alt: "Olive-gloved hand reaching toward an industrial vacuum nozzle on an off-white background",
-        },
-      },
-      community: {
-        background: { src: "assets/community-bg.jpg" },
-        hands: { src: "assets/community-hands.jpg", alt: "Hands gathered in a circle" },
-        meeting: { src: "assets/community-meeting.jpg", alt: "People collaborating at a table" },
-        trail: { src: "assets/community-trail.jpg", alt: "Forest trail with sunlight" },
+        background: { src: "assets/rainer.jpg" },
       },
     },
 
@@ -75,26 +60,6 @@ const SiteApp = (() => {
       default: ["Olalla, WA", "Mon–Fri 8:00AM–5:00PM", "(253) 258-5779", "mario@magacleaningservices.com"],
     },
 
-    tileGrids: {
-
-      community: {
-        tiles: [
-          { type: "image", assetPath: "assets.community.hands", place: { base: { col: "1 / 3", row: "1 / 3" } } },
-          {
-            type: "text",
-            text: "Dedicated, reliable, and transparent cleaning professionals focused on meeting your needs and exceeding expectations.",
-            place: { base: { col: "3 / 5", row: "1 / 3" } },
-          },
-          {
-            type: "image",
-            assetPath: "assets.community.meeting",
-            place: { base: { col: "5 / 7", row: "1 / 4" } },
-          },
-          { type: "kicker", text: "Request a quote", place: { base: { col: "1 / 4", row: "3 / 5" } } },
-          { type: "image", assetPath: "assets.community.trail", place: { base: { col: "4 / 7", row: "4 / 6" } } },
-        ],
-      },
-    },
     metricGrids: {
       impact: [
         { type: "metric", variant: "dark", label: "Phone", value: "(253) 258-5779" },
@@ -310,7 +275,7 @@ const SiteApp = (() => {
   function renderTileGrids() {
     queryAll("[data-tile-grid]").forEach((gridNode) => {
       const key = gridNode.getAttribute("data-tile-grid");
-      const grid = key ? APP_CONFIG.tileGrids[key] : null;
+      const grid = key ? APP_CONFIG.tileGrids?.[key] : null;
       if (!grid || !Array.isArray(grid.tiles)) return;
 
       const frag = document.createDocumentFragment();
@@ -399,7 +364,7 @@ const SiteApp = (() => {
             text: "Buy Now",
             attrs: { "aria-disabled": "true" },
           })
-          : createEl("a", { className: "c-btn c-btn--soft c-product__cta", text: "Buy Now", attrs: { href: "#signup" } });
+          : createEl("a", { className: "c-btn c-btn--soft c-product__cta", text: "Buy Now", attrs: { href: "#reviews" } });
 
         frag.appendChild(createEl("article", { className: cardClass, attrs: { role: "listitem" } }, [media, meta, cta]));
       }
