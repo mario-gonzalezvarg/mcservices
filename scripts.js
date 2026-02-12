@@ -31,12 +31,12 @@ const SiteApp = (() => {
         ctaThird: "Request a quote",
       },
 
-//      impact: {
-//        title: "Our Story",
-//        lead: "A family-operated cleaning company focused on reliable, high-quality results.",
-//        body:
-//          "Maga Cleaning Services supports residential and commercial clients with consistent, transparent service. The work spans office cleaning, carpet washing, move-in and move-out cleaning, post-construction cleanup, and other recurring needs—structured as a single, dependable cleaning partner.",
-//      },
+     impact: {
+       title: "Our Story",
+       lead: "A family-operated cleaning company focused on reliable, high-quality results.",
+       body:
+         "Maga Cleaning Services supports residential and commercial clients with consistent, transparent service. The work spans office cleaning, carpet washing, move-in and move-out cleaning, post-construction cleanup, and other recurring needs—structured as a single, dependable cleaning partner.",
+     },
 
 //      products: {
 //        title: "What We Offer",
@@ -60,14 +60,6 @@ const SiteApp = (() => {
       default: ["Olalla, WA", "Mon–Fri 8:00AM–5:00PM", "(253) 258-5779", "mario@magacleaningservices.com"],
     },
 
-    metricGrids: {
-      impact: [
-        { type: "metric", variant: "dark", label: "Phone", value: "(253) 258-5779" },
-        { type: "metric", variant: "light", label: "Email", value: "mario@magacleaningservices.com" },
-        { type: "metric", variant: "light", label: "Hours", value: "Mon–Fri 8:00AM–5:00PM" },
-        { type: "metric", variant: "dark", label: "Location", value: "Olalla, WA 98359" },
-      ],
-    },
     productGrids: {
       catalog: [
         {
@@ -305,39 +297,6 @@ const SiteApp = (() => {
     });
   }
 
-  function renderMetricGrids() {
-    queryAll("[data-metric-grid]").forEach((gridNode) => {
-      const key = gridNode.getAttribute("data-metric-grid");
-      const items = key ? APP_CONFIG.metricGrids[key] : null;
-      if (!Array.isArray(items)) return;
-
-      const frag = document.createDocumentFragment();
-
-      for (const item of items) {
-        if (item.type === "metric") {
-          frag.appendChild(
-            createEl("div", { className: `c-stat c-stat--${item.variant}` }, [
-              createEl("div", { className: "c-stat__label", text: item.label }),
-              createEl("div", { className: "c-stat__value", text: item.value }),
-            ])
-          );
-          continue;
-        }
-
-        frag.appendChild(
-          createEl("div", {
-            className: "c-stat c-stat--img u-bg",
-            attrs: { "data-bg": item.bgAssetPath, "data-overlay": item.overlay },
-          })
-        );
-      }
-
-      gridNode.replaceChildren(frag);
-      applyBackgroundBindings();
-      applyOverlayBindings(gridNode);
-    });
-  }
-
   function renderProductGrids() {
     queryAll("[data-product-grid]").forEach((gridNode) => {
       const key = gridNode.getAttribute("data-product-grid");
@@ -435,9 +394,7 @@ const SiteApp = (() => {
     updateYear();
 
     renderPartnerRows();
-    renderTileGrids();
-    renderMetricGrids();
-    renderProductGrids();
+    // renderProductGrids();
 
     applyBackgroundBindings();
     applyOverlayBindings(document);

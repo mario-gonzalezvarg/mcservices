@@ -11,7 +11,6 @@
   </head>
 
   <body>
-    <!-- HERO -->
     <section class="c-hero u-bg" id="home" data-bg="assets.hero.background" aria-label="Hero">
       <header class="c-header">
         <div class="l-container c-header__inner">
@@ -36,7 +35,7 @@
           <p class="c-hero__sub" data-text="text.hero.subtitle"></p>
 
           <div class="c-hero__actions">
-            <a class="c-btn c-btn--primary c-btn--lg" href="#services" data-text="text.hero.ctaPrimary"></a>
+            <a class="c-btn c-btn--ghost c-btn--lg" href="#services" data-text="text.hero.ctaPrimary"></a>
             <a class="c-btn c-btn--ghost c-btn--lg" href="#impact" data-text="text.hero.ctaSecondary"></a>
             <a class="c-btn c-btn--ghost c-btn--lg" href="#contact" data-text="text.hero.ctaThird"></a>
           </div>
@@ -49,7 +48,6 @@
     </section>
 
     <main id="main">
-      <!-- IMPACT -->
       <section class="l-section l-section--tint" id="impact" aria-label="Impact">
         <div class="l-container l-split">
           <div class="l-split__copy">
@@ -57,63 +55,9 @@
             <p class="l-lead" data-text="text.impact.lead"></p>
             <p class="l-body" data-text="text.impact.body"></p>
           </div>
-
-          <div class="l-split__panel" aria-label="Impact metrics">
-            <div class="c-metric-grid" data-metric-grid="impact"></div>
-          </div>
         </div>
       </section>
-
-      <!-- SERVICES -->
-      <section class="l-section" id="services" aria-label="Services">
-        <div class="l-container">
-          <div class="l-head">
-            <h2 class="l-title" data-text="text.products.title"></h2>
-            <p class="l-lead" data-text="text.products.lead"></p>
-          </div>
-
-          <div class="c-product-grid" data-product-grid="catalog" role="list" aria-label="Services"></div>
-        </div>
-      </section>
-
-      <!-- CONTACT -->
-      <section class="c-community u-bg" id="reviews" data-bg="assets.community.background" aria-label="Contact">
-        <div class="c-community__overlay" aria-hidden="true"></div>
-
-        <div class="l-container c-community__grid">
-          <div class="c-community__copy">
-            <h2 class="c-community__title" data-text="text.community.title"></h2>
-            <p class="c-community__lead" data-text="text.community.lead"></p>
-          </div>
-
-          <div class="c-community__panel">
-            <div class="c-tile-grid" data-tile-grid="community" aria-label="Contact highlights"></div>
-
-            <form class="c-newsletter" id="contact" aria-label="Quote request">
-              <label class="u-sr-only" for="email">Email address</label>
-              <input
-                class="c-newsletter__input"
-                id="email"
-                name="email"
-                type="email"
-                autocomplete="email"
-                required
-                data-attr="placeholder:text.community.newsletter.placeholder"
-              />
-              <button class="c-newsletter__btn" type="submit" aria-label="Submit email">
-                <span aria-hidden="true">→</span>
-              </button>
-            </form>
-          </div>
-        </div>
-
-        <footer class="c-footer" aria-label="Footer">
-          <div class="l-container c-footer__row">
-            <span class="c-footer__muted">© <span id="year">2026</span> <span data-text="text.brand.name"></span></span>
-            <a class="c-footer__link" href="#home" data-text="text.footer.backToTop"></a>
-          </div>
-        </footer>
-      </section>
+    
     </main>
   </body>
 </html>
